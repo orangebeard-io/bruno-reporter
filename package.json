@@ -1,0 +1,41 @@
+{
+  "name": "@orangebeard-io/bruno-reporter",
+  "version": "1.0.0",
+  "description": "Report Bruno CLI JSON test results to Orangebeard",
+  "main": "dist/reporter.js",
+  "types": "dist/reporter.d.ts",
+  "bin": {
+    "bruno-to-orangebeard": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "cross-env ORANGEBEARD_TESTSET=\"Bruno reporter unit test\" jest",
+    "integration-test": "cross-env ORANGEBEARD_TESTSET=\"Bruno Integration Test Set\" ORANGEBEARD_DESCRIPTION=\"A run from Bruno CLI json\" node ./dist/cli.js -f results.json",
+    "report": "node ./dist/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/orangebeard-io/bruno-reporter.git"
+  },
+  "author": "Team Soju",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/orangebeard-io/bruno-reporter/issues"
+  },
+  "homepage": "https://github.com/orangebeard-io/bruno-reporter#readme",
+  "dependencies": {
+    "@js-joda/core": "^5.7.0",
+    "@orangebeard-io/javascript-client": "^2.0.8"
+  },
+  "devDependencies": {
+    "@orangebeard-io/jest-listener": "^2.0.3",
+    "@types/jest": "^29.5.12",
+    "cross-env": "^10.1.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.3.3"
+  }
+}

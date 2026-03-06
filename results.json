@@ -1,0 +1,2656 @@
+[
+  {
+    "iterationIndex": 0,
+    "results": [
+      {
+        "test": {
+          "filename": "Basic\\ApiRestful\\Create Object.bru"
+        },
+        "request": {
+          "method": null,
+          "url": null,
+          "headers": null,
+          "data": null
+        },
+        "response": {
+          "status": "error",
+          "statusText": null,
+          "headers": null,
+          "data": null,
+          "url": null,
+          "responseTime": 0
+        },
+        "status": "error",
+        "error": "Error: Cannot find module @faker-js/faker",
+        "assertionResults": [],
+        "testResults": [],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "runDuration": 0.0854666,
+        "name": "Create Object",
+        "path": "Basic\\ApiRestful\\Create Object",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "Basic\\ApiRestful\\Create Object 2.bru"
+        },
+        "request": {
+          "method": null,
+          "url": null,
+          "headers": null,
+          "data": null
+        },
+        "response": {
+          "status": "error",
+          "statusText": null,
+          "headers": null,
+          "data": null,
+          "url": null,
+          "responseTime": 0
+        },
+        "status": "error",
+        "error": "Error: Cannot find module @faker-js/faker",
+        "assertionResults": [],
+        "testResults": [],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "runDuration": 0.0436975,
+        "name": "Create Object 2",
+        "path": "Basic\\ApiRestful\\Create Object 2",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "Basic\\ChuckNorris\\ChuckNorris Facts.bru"
+        },
+        "request": {
+          "method": "GET",
+          "url": "https://api.chucknorris.io/jokes/random",
+          "headers": {
+            "content-type": null
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Fri, 06 Mar 2026 12:16:04 GMT",
+            "content-type": "application/json",
+            "transfer-encoding": "chunked",
+            "connection": "close",
+            "nel": "{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}",
+            "report-to": "{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=f%2F%2BXRDY78%2F3jhelkSq0N7rlVYlBTT6E1jG%2FWq8KvqJM%3D\\u0026sid=812dcc77-0bd0-43b1-a5f1-b25750382959\\u0026ts=1772799364\"}],\"max_age\":3600}",
+            "reporting-endpoints": "heroku-nel=\"https://nel.heroku.com/reports?s=f%2F%2BXRDY78%2F3jhelkSq0N7rlVYlBTT6E1jG%2FWq8KvqJM%3D&sid=812dcc77-0bd0-43b1-a5f1-b25750382959&ts=1772799364\"",
+            "server": "cloudflare",
+            "vary": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+            "via": "1.1 heroku-router",
+            "x-frame-options": "DENY",
+            "cf-cache-status": "DYNAMIC",
+            "cf-ray": "9d814a1d3f25f5b6-AMS",
+            "alt-svc": "h3=\":443\"; ma=86400"
+          },
+          "data": {
+            "categories": [],
+            "created_at": "2020-01-05 13:42:25.628594",
+            "icon_url": "https://api.chucknorris.io/img/avatar/chuck-norris.png",
+            "id": "fTCHeXxcRGazFW9KRsRbJg",
+            "updated_at": "2020-01-05 13:42:25.628594",
+            "url": "https://api.chucknorris.io/jokes/fTCHeXxcRGazFW9KRsRbJg",
+            "value": "When Chuck Norris brews a strong pot of coffee he uses a flame thrower and 1/2 of Columbia's coffee trees."
+          },
+          "url": "https://api.chucknorris.io/jokes/random",
+          "responseTime": 128
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [
+          {
+            "uid": "IMDF_PTI_vnF7urWNZlw8",
+            "lhsExpr": "res.body.value",
+            "rhsExpr": "isString",
+            "rhsOperand": "",
+            "operator": "isString",
+            "status": "pass"
+          },
+          {
+            "uid": "s2gcxaZYI-HtcHZwU63H-",
+            "lhsExpr": "res.body.id",
+            "rhsExpr": "matches ^[\\w\\d\\-]*$",
+            "rhsOperand": "^[\\w\\d\\-]*$",
+            "operator": "matches",
+            "status": "pass"
+          },
+          {
+            "uid": "Gfg4RcbV4UODuDbmQzF3u",
+            "lhsExpr": "res.status",
+            "rhsExpr": "eq 200",
+            "rhsOperand": "200",
+            "operator": "eq",
+            "status": "pass"
+          },
+          {
+            "uid": "yPWzNHE68tQlbRK1F14E9",
+            "lhsExpr": "res.body.updated_at",
+            "rhsExpr": "matches ^\\d{4}\\-\\d{2}\\-\\d{2} \\d{2}:\\d{2}:\\d{2}.\\d{1,6}$",
+            "rhsOperand": "^\\d{4}\\-\\d{2}\\-\\d{2} \\d{2}:\\d{2}:\\d{2}.\\d{1,6}$",
+            "operator": "matches",
+            "status": "pass"
+          }
+        ],
+        "testResults": [
+          {
+            "description": "Response Value should be a String",
+            "status": "pass",
+            "uid": "sk_sIuRZj64WKeCFJQZJB"
+          },
+          {
+            "description": "Response Id should be valid (RegEx)",
+            "status": "pass",
+            "uid": "njwBT9V0zf2cErASfHyFo"
+          },
+          {
+            "description": "Response Status should be 200",
+            "status": "pass",
+            "uid": "rnJS9FdE4X8nC42lia6n6"
+          },
+          {
+            "description": "Response Updated At is a Valid Date",
+            "status": "pass",
+            "uid": "zIgD3vxDcEwFljFcNUwMI"
+          },
+          {
+            "description": "[Collection] ResponseTime max is 500 ms",
+            "status": "pass",
+            "uid": "TCeLStjbe48_gJ1pDzGX_"
+          }
+        ],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 0.2282254,
+        "name": "ChuckNorris Facts",
+        "path": "Basic\\ChuckNorris\\ChuckNorris Facts",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "Basic\\RandomUser\\Random User Generator.bru"
+        },
+        "request": {
+          "method": "GET",
+          "url": "https://randomuser.me/api/",
+          "headers": {
+            "content-type": null
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Fri, 06 Mar 2026 12:16:04 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "close",
+            "server": "cloudflare",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "x-powered-by": "Express",
+            "access-control-allow-origin": "*",
+            "cache-control": "no-cache",
+            "etag": "W/\"4c8-TLvf9TX1m/ge5M6Wsaln+Ihuo4U\"",
+            "vary": "Accept-Encoding",
+            "cf-cache-status": "DYNAMIC",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=jUABusniRZNZaupJ6tB0pBclyOefoneGfN3cpZh2OrkcXRhCKWDgFspzcjKfF7bkmMjyyek6fMGc5EkLbv%2FYpUYphXQcEUQGvxYTE4Q%3D\"}]}",
+            "cf-ray": "9d814a1e8c765a40-AMS",
+            "alt-svc": "h3=\":443\"; ma=86400"
+          },
+          "data": {
+            "results": [
+              {
+                "gender": "female",
+                "name": {
+                  "title": "Miss",
+                  "first": "Waldinélia",
+                  "last": "Pereira"
+                },
+                "location": {
+                  "street": {
+                    "number": 2698,
+                    "name": "Rua Primeiro de Maio "
+                  },
+                  "city": "Jaboatão dos Guararapes",
+                  "state": "Mato Grosso",
+                  "country": "Brazil",
+                  "postcode": 62656,
+                  "coordinates": {
+                    "latitude": "-79.4959",
+                    "longitude": "96.1806"
+                  },
+                  "timezone": {
+                    "offset": "+5:00",
+                    "description": "Ekaterinburg, Islamabad, Karachi, Tashkent"
+                  }
+                },
+                "email": "waldinelia.pereira@example.com",
+                "login": {
+                  "uuid": "fc2a4876-95a7-4f21-aa09-d5249bdcff7c",
+                  "username": "organicswan435",
+                  "password": "1236",
+                  "salt": "vPD9igAP",
+                  "md5": "cf7ca52cefcd3b2d97c6e63af31c729a",
+                  "sha1": "85083ef4b3f5a6d3a68c493d10c1a3df56acdda5",
+                  "sha256": "9d0b5935455821ae763316fbe571fa9b324dda95eab1681cbe9dde98cd9c2b8e"
+                },
+                "dob": {
+                  "date": "1953-09-02T13:21:55.915Z",
+                  "age": 72
+                },
+                "registered": {
+                  "date": "2007-05-26T22:13:37.030Z",
+                  "age": 18
+                },
+                "phone": "(68) 7994-7230",
+                "cell": "(76) 6689-2470",
+                "id": {
+                  "name": "CPF",
+                  "value": "797.105.858-10"
+                },
+                "picture": {
+                  "large": "https://randomuser.me/api/portraits/women/60.jpg",
+                  "medium": "https://randomuser.me/api/portraits/med/women/60.jpg",
+                  "thumbnail": "https://randomuser.me/api/portraits/thumb/women/60.jpg"
+                },
+                "nat": "BR"
+              }
+            ],
+            "info": {
+              "seed": "66e6707751598608",
+              "results": 1,
+              "page": 1,
+              "version": "1.4"
+            }
+          },
+          "url": "https://randomuser.me/api/",
+          "responseTime": 163
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [],
+        "testResults": [
+          {
+            "description": "[Collection] ResponseTime max is 500 ms",
+            "status": "pass",
+            "uid": "LQap4lXAQDALTOf3kCo8F"
+          }
+        ],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 0.2161957,
+        "name": "Random User Generator",
+        "path": "Basic\\RandomUser\\Random User Generator",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "Basic\\RandomUser\\Random User Generator US.bru"
+        },
+        "request": {
+          "method": "GET",
+          "url": "https://randomuser.me/api/?nat=us",
+          "headers": {
+            "content-type": null
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Fri, 06 Mar 2026 12:16:05 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "close",
+            "server": "cloudflare",
+            "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+            "x-powered-by": "Express",
+            "access-control-allow-origin": "*",
+            "cache-control": "no-cache",
+            "etag": "W/\"473-8xbKfodBSz/8qNJ++1cUEjpNR3I\"",
+            "vary": "Accept-Encoding",
+            "cf-cache-status": "DYNAMIC",
+            "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2F%2BcdUKBWdXLxK6GLyTQzMATeYNFhKdhCqRFUyQcot5oZ1I1WakSber9ws0vcPtjLxfRmOJEKLtA2Fd1KaJLU1KtE3ZCji3%2BaJnhrJXw%3D\"}]}",
+            "cf-ray": "9d814a1fb9c11716-AMS",
+            "alt-svc": "h3=\":443\"; ma=86400"
+          },
+          "data": {
+            "results": [
+              {
+                "gender": "male",
+                "name": {
+                  "title": "Mr",
+                  "first": "Seth",
+                  "last": "Scott"
+                },
+                "location": {
+                  "street": {
+                    "number": 7043,
+                    "name": "W Pecan St"
+                  },
+                  "city": "Norman",
+                  "state": "New Jersey",
+                  "country": "United States",
+                  "postcode": 24883,
+                  "coordinates": {
+                    "latitude": "-10.7759",
+                    "longitude": "-162.4245"
+                  },
+                  "timezone": {
+                    "offset": "-9:00",
+                    "description": "Alaska"
+                  }
+                },
+                "email": "seth.scott@example.com",
+                "login": {
+                  "uuid": "ed2be992-5fe0-4de8-9414-c56a4699b94e",
+                  "username": "bigelephant809",
+                  "password": "domain",
+                  "salt": "w94bY5IM",
+                  "md5": "aae140cb1030e2e2de6ac9dd083bad79",
+                  "sha1": "44d65288cc83f27b0f7a3659a75ab9c236bd0853",
+                  "sha256": "49dd3d4ea63f121ee55973c60e7311ffb0cd019ac9123872e9f756b5337c42e7"
+                },
+                "dob": {
+                  "date": "1964-01-08T17:35:02.664Z",
+                  "age": 62
+                },
+                "registered": {
+                  "date": "2010-12-02T16:12:46.337Z",
+                  "age": 15
+                },
+                "phone": "(445) 675-2983",
+                "cell": "(431) 611-6852",
+                "id": {
+                  "name": "SSN",
+                  "value": "691-91-2714"
+                },
+                "picture": {
+                  "large": "https://randomuser.me/api/portraits/men/66.jpg",
+                  "medium": "https://randomuser.me/api/portraits/med/men/66.jpg",
+                  "thumbnail": "https://randomuser.me/api/portraits/thumb/men/66.jpg"
+                },
+                "nat": "US"
+              }
+            ],
+            "info": {
+              "seed": "98234a7bf0320d06",
+              "results": 1,
+              "page": 1,
+              "version": "1.4"
+            }
+          },
+          "url": "https://randomuser.me/api/?nat=us",
+          "responseTime": 143
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [],
+        "testResults": [
+          {
+            "description": "[Collection] ResponseTime max is 500 ms",
+            "status": "pass",
+            "uid": "WYYjAwRweUPUvW3dSaqVB"
+          }
+        ],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 0.1959283,
+        "name": "Random User Generator US",
+        "path": "Basic\\RandomUser\\Random User Generator US",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "Basic\\StatusTest\\Status303.bru"
+        },
+        "request": {
+          "method": "GET",
+          "url": "https://postman-echo.com/status/303",
+          "headers": {
+            "content-type": null
+          }
+        },
+        "response": {
+          "status": 303,
+          "statusText": "See Other",
+          "headers": {
+            "date": "Fri, 06 Mar 2026 12:16:05 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "content-length": "14",
+            "connection": "close",
+            "cf-ray": "9d814a21886ffffb-AMS",
+            "etag": "W/\"e-jXC7V36N2t+H9C+fIjj9jZIH8Gw\"",
+            "vary": "Accept-Encoding",
+            "set-cookie": [
+              "sails.sid=s%3ABoWw_7AlZ19jOnETkK7Z6rnMcLp_M_QR.fSpPS4N8%2BjLXSldy3MGSbd%2BnpoiiDWemuvlwOTabDGk; Path=/; HttpOnly",
+              "__cf_bm=riIg1FIA6u8O5tAzD47SfTF.o4JyHNfVk2mdjO659V0-1772799365-1.0.1.1-mKMYKG39v9Yy4MSHlATuTq9B5BzVLa.O3Ud4pcLTljLlFaInMcneM_fnP0tb.YzyfTxdlb6K2gLkQsGiQOB90lp0_ZjQftq6_pOe.qSFHR4; path=/; expires=Fri, 06-Mar-26 12:46:05 GMT; domain=.postman-echo.com; HttpOnly; Secure; SameSite=None",
+              "_cfuvid=vt.cy_GYN0Azuz8FxDGml1SNY5x1Q6N9Fw1H7lwBFRQ-1772799365480-0.0.1.1-604800000; path=/; domain=.postman-echo.com; HttpOnly; Secure; SameSite=None"
+            ],
+            "x-envoy-upstream-service-time": "8",
+            "cf-cache-status": "DYNAMIC",
+            "server": "cloudflare"
+          },
+          "data": {
+            "status": 303
+          },
+          "url": "https://postman-echo.com/status/303",
+          "responseTime": 258
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [
+          {
+            "uid": "ZlEEicQ4MZjKDEyUCDNe7",
+            "lhsExpr": "res.status",
+            "rhsExpr": "eq 303",
+            "rhsOperand": "303",
+            "operator": "eq",
+            "status": "pass"
+          }
+        ],
+        "testResults": [
+          {
+            "description": "[Collection] ResponseTime max is 500 ms",
+            "status": "pass",
+            "uid": "21NQLa18hZ5nIP1pYxZgb"
+          }
+        ],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 0.3117355,
+        "name": "Status303",
+        "path": "Basic\\StatusTest\\Status303",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "MusicBrainz\\Artist Finder.bru"
+        },
+        "request": {
+          "method": "GET",
+          "url": "https://musicbrainz.org/ws/2/artist?query=Green&limit=5",
+          "headers": {
+            "content-type": null
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Fri, 06 Mar 2026 12:16:05 GMT",
+            "content-type": "application/json",
+            "content-length": "2069",
+            "connection": "close",
+            "x-ratelimit-limit": "1200",
+            "x-ratelimit-remaining": "818",
+            "x-ratelimit-reset": "1772799366",
+            "content-security-policy": "default-src 'none'; base-uri 'none'; connect-src 'self'; form-action 'self'; font-src 'self'; frame-ancestors 'none'; img-src 'self' data:; media-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; worker-src 'self';",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "last-modified": "Fri, 06 Mar 2026 12:13:05 GMT",
+            "etag": "\"NTZjMTY0MDAwMDAwMDAwMFNvbHI=--gzip\"",
+            "vary": "Accept-Encoding",
+            "x-cache-status": "STALE",
+            "access-control-allow-origin": "*"
+          },
+          "data": {
+            "created": "2026-03-06T12:15:42.904Z",
+            "count": 4553,
+            "offset": 0,
+            "artists": [
+              {
+                "id": "084308bd-1654-436f-ba03-df6697104e19",
+                "type": "Group",
+                "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+                "score": 100,
+                "name": "Green Day",
+                "sort-name": "Green Day",
+                "country": "US",
+                "area": {
+                  "id": "489ce91b-6658-3307-9877-795b68554c98",
+                  "type": "Country",
+                  "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+                  "name": "United States",
+                  "sort-name": "United States",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "begin-area": {
+                  "id": "f9719692-c39a-4d9c-bf8c-dd4035b09534",
+                  "type": "City",
+                  "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+                  "name": "Berkeley",
+                  "sort-name": "Berkeley",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "isnis": [
+                  "0000000122711282"
+                ],
+                "life-span": {
+                  "begin": "1989",
+                  "ended": null
+                },
+                "aliases": [
+                  {
+                    "sort-name": "グリーン・デイ",
+                    "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+                    "name": "グリーン・デイ",
+                    "locale": "ja",
+                    "type": "Artist name",
+                    "primary": true,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Greenday",
+                    "name": "Greenday",
+                    "locale": null,
+                    "type": null,
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  }
+                ],
+                "tags": [
+                  {
+                    "count": 10,
+                    "name": "rock"
+                  },
+                  {
+                    "count": 0,
+                    "name": "pop"
+                  },
+                  {
+                    "count": 18,
+                    "name": "alternative rock"
+                  },
+                  {
+                    "count": 6,
+                    "name": "punk"
+                  },
+                  {
+                    "count": 4,
+                    "name": "american"
+                  },
+                  {
+                    "count": 34,
+                    "name": "punk rock"
+                  },
+                  {
+                    "count": 0,
+                    "name": "grunge"
+                  },
+                  {
+                    "count": 0,
+                    "name": "post-punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "ska punk"
+                  },
+                  {
+                    "count": 1,
+                    "name": "usa"
+                  },
+                  {
+                    "count": 4,
+                    "name": "power pop"
+                  },
+                  {
+                    "count": 0,
+                    "name": "pop-punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "américain"
+                  },
+                  {
+                    "count": 0,
+                    "name": "post-grunge"
+                  },
+                  {
+                    "count": 0,
+                    "name": "pop rock"
+                  },
+                  {
+                    "count": 28,
+                    "name": "pop punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "skate punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "punk pop"
+                  },
+                  {
+                    "count": 1,
+                    "name": "california"
+                  },
+                  {
+                    "count": 1,
+                    "name": "bay area"
+                  },
+                  {
+                    "count": 0,
+                    "name": "pop and chart"
+                  },
+                  {
+                    "count": 1,
+                    "name": "united states"
+                  },
+                  {
+                    "count": 4,
+                    "name": "queer"
+                  },
+                  {
+                    "count": 0,
+                    "name": "classic pop punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "california punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "classic punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "bay area punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "pop/rock"
+                  },
+                  {
+                    "count": -1,
+                    "name": "2240665859492"
+                  }
+                ]
+              },
+              {
+                "id": "fb7272ba-f130-4f0a-934d-6eeea4c18c9a",
+                "type": "Person",
+                "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                "score": 95,
+                "gender-id": "36d3d30a-839d-3eda-8cb3-29be4384e4a9",
+                "name": "Al Green",
+                "sort-name": "Green, Al",
+                "gender": "male",
+                "country": "US",
+                "area": {
+                  "id": "489ce91b-6658-3307-9877-795b68554c98",
+                  "type": "Country",
+                  "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+                  "name": "United States",
+                  "sort-name": "United States",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "begin-area": {
+                  "id": "c4d48bca-3716-4533-8966-a25b8c7b50a5",
+                  "type": "City",
+                  "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+                  "name": "Forrest City",
+                  "sort-name": "Forrest City",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "disambiguation": "US soul singer, songwriter, pastor and record producer",
+                "ipis": [
+                  "00012614624",
+                  "00055306003",
+                  "00141754583"
+                ],
+                "isnis": [
+                  "000000008398392X"
+                ],
+                "life-span": {
+                  "begin": "1946-04-13",
+                  "ended": null
+                },
+                "aliases": [
+                  {
+                    "sort-name": "アル・グリーン",
+                    "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+                    "name": "アル・グリーン",
+                    "locale": "ja",
+                    "type": "Artist name",
+                    "primary": true,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Greene, Albert Leornes",
+                    "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+                    "name": "Albert Leornes Greene",
+                    "locale": null,
+                    "type": "Legal name",
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Green, Al",
+                    "name": "Green, Al",
+                    "locale": null,
+                    "type": null,
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  }
+                ],
+                "tags": [
+                  {
+                    "count": 14,
+                    "name": "soul"
+                  },
+                  {
+                    "count": 1,
+                    "name": "1980s"
+                  },
+                  {
+                    "count": 1,
+                    "name": "1970s"
+                  },
+                  {
+                    "count": 3,
+                    "name": "gospel"
+                  },
+                  {
+                    "count": 2,
+                    "name": "southern soul"
+                  },
+                  {
+                    "count": 1,
+                    "name": "soul blues"
+                  },
+                  {
+                    "count": 0,
+                    "name": "soul and reggae"
+                  },
+                  {
+                    "count": 1,
+                    "name": "contemporary gospel"
+                  },
+                  {
+                    "count": 1,
+                    "name": "christmas music"
+                  },
+                  {
+                    "count": 5,
+                    "name": "smooth soul"
+                  },
+                  {
+                    "count": 1,
+                    "name": "pop-soul"
+                  },
+                  {
+                    "count": 2,
+                    "name": "memphis soul"
+                  },
+                  {
+                    "count": 1,
+                    "name": "2008 universal fire victim"
+                  }
+                ]
+              },
+              {
+                "id": "1a88b270-d763-48d5-a62c-2bb9cabb140c",
+                "type": "Person",
+                "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                "score": 89,
+                "gender-id": "36d3d30a-839d-3eda-8cb3-29be4384e4a9",
+                "name": "Grant Green",
+                "sort-name": "Green, Grant",
+                "gender": "male",
+                "country": "US",
+                "area": {
+                  "id": "489ce91b-6658-3307-9877-795b68554c98",
+                  "type": "Country",
+                  "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+                  "name": "United States",
+                  "sort-name": "United States",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "begin-area": {
+                  "id": "759f9567-9107-40ef-a825-e57824a62e70",
+                  "type": "City",
+                  "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+                  "name": "St. Louis",
+                  "sort-name": "St. Louis",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "end-area": {
+                  "id": "74e50e58-5deb-4b99-93a2-decbb365c07f",
+                  "type": "City",
+                  "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+                  "name": "New York",
+                  "sort-name": "New York",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "disambiguation": "jazz guitarist",
+                "ipis": [
+                  "00012619609"
+                ],
+                "isnis": [
+                  "000000011034995X"
+                ],
+                "life-span": {
+                  "begin": "1935-06-06",
+                  "end": "1979-01-31",
+                  "ended": true
+                },
+                "aliases": [
+                  {
+                    "sort-name": "Grant Geeen",
+                    "name": "Grant Geeen",
+                    "locale": null,
+                    "type": null,
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  }
+                ],
+                "tags": [
+                  {
+                    "count": 4,
+                    "name": "jazz"
+                  },
+                  {
+                    "count": 1,
+                    "name": "american"
+                  },
+                  {
+                    "count": 2,
+                    "name": "hard bop"
+                  },
+                  {
+                    "count": 1,
+                    "name": "jazz-funk"
+                  },
+                  {
+                    "count": 1,
+                    "name": "cool jazz"
+                  },
+                  {
+                    "count": 2,
+                    "name": "soul jazz"
+                  },
+                  {
+                    "count": 1,
+                    "name": "latin jazz"
+                  },
+                  {
+                    "count": -1,
+                    "name": "death by heart attack"
+                  }
+                ]
+              },
+              {
+                "id": "e425b041-c28a-4ae8-9d5c-997890433cd4",
+                "type": "Person",
+                "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                "score": 87,
+                "gender-id": "36d3d30a-839d-3eda-8cb3-29be4384e4a9",
+                "name": "Green Velvet",
+                "sort-name": "Green Velvet",
+                "gender": "male",
+                "country": "US",
+                "area": {
+                  "id": "489ce91b-6658-3307-9877-795b68554c98",
+                  "type": "Country",
+                  "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+                  "name": "United States",
+                  "sort-name": "United States",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "begin-area": {
+                  "id": "29a709d8-0320-493e-8d0c-f2c386662b7f",
+                  "type": "City",
+                  "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+                  "name": "Chicago",
+                  "sort-name": "Chicago",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "isnis": [
+                  "0000000073285343"
+                ],
+                "life-span": {
+                  "begin": "1967-04-26",
+                  "ended": null
+                },
+                "aliases": [
+                  {
+                    "sort-name": "Green Verlet",
+                    "name": "Green Verlet",
+                    "locale": null,
+                    "type": null,
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Curan Stone",
+                    "name": "Curan Stone",
+                    "locale": null,
+                    "type": null,
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  }
+                ],
+                "tags": [
+                  {
+                    "count": 1,
+                    "name": "electronic"
+                  },
+                  {
+                    "count": 2,
+                    "name": "house"
+                  },
+                  {
+                    "count": 1,
+                    "name": "electro"
+                  },
+                  {
+                    "count": 1,
+                    "name": "minimal techno"
+                  },
+                  {
+                    "count": 1,
+                    "name": "tech house"
+                  }
+                ]
+              },
+              {
+                "id": "bd13909f-1c29-4c27-a874-d4aaf27c5b1a",
+                "type": "Group",
+                "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+                "score": 87,
+                "name": "Fleetwood Mac",
+                "sort-name": "Fleetwood Mac",
+                "country": "GB",
+                "area": {
+                  "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                  "type": "Country",
+                  "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+                  "name": "United Kingdom",
+                  "sort-name": "United Kingdom",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "begin-area": {
+                  "id": "f03d09b3-39dc-4083-afd6-159e3f0d462f",
+                  "type": "City",
+                  "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+                  "name": "London",
+                  "sort-name": "London",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "isnis": [
+                  "0000000112090777"
+                ],
+                "life-span": {
+                  "begin": "1967-07",
+                  "ended": null
+                },
+                "aliases": [
+                  {
+                    "sort-name": "Green, Peter’s Fleetwood Mac",
+                    "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+                    "name": "Peter Green’s Fleetwood Mac",
+                    "locale": null,
+                    "type": "Artist name",
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Mac Fleetwood",
+                    "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+                    "name": "Mac Fleetwood",
+                    "locale": null,
+                    "type": "Search hint",
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Fleetwood Mack",
+                    "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+                    "name": "Fleetwood Mack",
+                    "locale": null,
+                    "type": "Search hint",
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Flettwood Mac",
+                    "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+                    "name": "Flettwood Mac",
+                    "locale": null,
+                    "type": "Search hint",
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Fleedwood Mac",
+                    "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+                    "name": "Fleedwood Mac",
+                    "locale": null,
+                    "type": "Search hint",
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  }
+                ],
+                "tags": [
+                  {
+                    "count": 16,
+                    "name": "rock"
+                  },
+                  {
+                    "count": 4,
+                    "name": "pop"
+                  },
+                  {
+                    "count": -1,
+                    "name": "american"
+                  },
+                  {
+                    "count": 6,
+                    "name": "blues"
+                  },
+                  {
+                    "count": 0,
+                    "name": "british"
+                  },
+                  {
+                    "count": -1,
+                    "name": "band"
+                  },
+                  {
+                    "count": 0,
+                    "name": "folk rock"
+                  },
+                  {
+                    "count": 0,
+                    "name": "psychedelic rock"
+                  },
+                  {
+                    "count": 11,
+                    "name": "blues rock"
+                  },
+                  {
+                    "count": 0,
+                    "name": "jam band"
+                  },
+                  {
+                    "count": 1,
+                    "name": "classic rock"
+                  },
+                  {
+                    "count": 13,
+                    "name": "soft rock"
+                  },
+                  {
+                    "count": 0,
+                    "name": "acoustic rock"
+                  },
+                  {
+                    "count": 10,
+                    "name": "pop rock"
+                  },
+                  {
+                    "count": 0,
+                    "name": "electric blues"
+                  },
+                  {
+                    "count": 5,
+                    "name": "british blues"
+                  },
+                  {
+                    "count": 0,
+                    "name": "english"
+                  },
+                  {
+                    "count": 0,
+                    "name": "rock music"
+                  },
+                  {
+                    "count": 0,
+                    "name": "classic pop and rock"
+                  },
+                  {
+                    "count": 0,
+                    "name": "pop/rock"
+                  },
+                  {
+                    "count": 1,
+                    "name": "art pop"
+                  },
+                  {
+                    "count": 0,
+                    "name": "fleetwood mac"
+                  },
+                  {
+                    "count": 0,
+                    "name": "british-american"
+                  }
+                ]
+              }
+            ]
+          },
+          "url": "https://musicbrainz.org/ws/2/artist?query=Green&limit=5",
+          "responseTime": 149
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [
+          {
+            "uid": "LBilYbvrYCp30ezeeIVae",
+            "lhsExpr": "res.body.artists",
+            "rhsExpr": "length 5",
+            "rhsOperand": "5",
+            "operator": "length",
+            "status": "pass"
+          }
+        ],
+        "testResults": [
+          {
+            "description": "[MusicBrainz] Response Status is OK (200)",
+            "status": "pass",
+            "uid": "TzUUnWQ76XNaIEv6b8BMg"
+          },
+          {
+            "description": "[Collection] ResponseTime max is 500 ms",
+            "status": "pass",
+            "uid": "lPtA3nzPlxKD_Llb5-Ggj"
+          }
+        ],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 0.1991486,
+        "name": "Artist Finder",
+        "path": "MusicBrainz\\Artist Finder",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "MusicBrainz\\XML Tests.bru"
+        },
+        "request": {
+          "method": "GET",
+          "url": "https://musicbrainz.org/ws/2/artist/084308bd-1654-436f-ba03-df6697104e19?fmt=xml",
+          "headers": {
+            "content-type": null
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Fri, 06 Mar 2026 12:16:05 GMT",
+            "content-type": "application/xml; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "close",
+            "vary": "Accept-Encoding",
+            "x-ratelimit-limit": "1200",
+            "x-ratelimit-remaining": "746",
+            "x-ratelimit-reset": "1772799366",
+            "server": "Plack::Handler::Starlet",
+            "etag": "W/\"8eb96d4cf23ad76b8b57caf1566194aa\"",
+            "access-control-allow-origin": "*",
+            "x-runtime": "0.022950",
+            "x-cache-status": "MISS"
+          },
+          "data": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<metadata xmlns=\"http://musicbrainz.org/ns/mmd-2.0#\"><artist id=\"084308bd-1654-436f-ba03-df6697104e19\" type=\"Group\" type-id=\"e431f5f6-b5d2-343d-8b36-72607fffb74b\"><name>Green Day</name><sort-name>Green Day</sort-name><country>US</country><area id=\"489ce91b-6658-3307-9877-795b68554c98\"><name>United States</name><sort-name>United States</sort-name><iso-3166-1-code-list><iso-3166-1-code>US</iso-3166-1-code></iso-3166-1-code-list></area><begin-area id=\"f9719692-c39a-4d9c-bf8c-dd4035b09534\"><name>Berkeley</name><sort-name>Berkeley</sort-name></begin-area><isni-list><isni>0000000122711282</isni></isni-list><life-span><begin>1989</begin></life-span></artist></metadata>\n",
+          "url": "https://musicbrainz.org/ws/2/artist/084308bd-1654-436f-ba03-df6697104e19?fmt=xml",
+          "responseTime": 114
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [
+          {
+            "uid": "MRy8tWtsTuGKXtHlQD46g",
+            "lhsExpr": "res.body",
+            "rhsExpr": "startsWith <?xml",
+            "rhsOperand": "<?xml",
+            "operator": "startsWith",
+            "status": "pass"
+          },
+          {
+            "uid": "FFEln1kQfJbes82Y2xc-F",
+            "lhsExpr": "res.body",
+            "rhsExpr": "contains <metadata",
+            "rhsOperand": "<metadata",
+            "operator": "contains",
+            "status": "pass"
+          },
+          {
+            "uid": "9Sctsp5TOedXghetiXlBx",
+            "lhsExpr": "res.body",
+            "rhsExpr": "contains </metadata>",
+            "rhsOperand": "</metadata>",
+            "operator": "contains",
+            "status": "pass"
+          },
+          {
+            "uid": "lXVS5C0GI7LkL8jfIhPfl",
+            "lhsExpr": "res.body",
+            "rhsExpr": "contains <name>Green Day</name>",
+            "rhsOperand": "<name>Green Day</name>",
+            "operator": "contains",
+            "status": "pass"
+          }
+        ],
+        "testResults": [],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 0.215202,
+        "name": "XML Tests",
+        "path": "MusicBrainz\\XML Tests",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "MusicBrainz\\JSON Asserts.bru"
+        },
+        "request": {
+          "method": "GET",
+          "url": "https://musicbrainz.org/ws/2/artist/084308bd-1654-436f-ba03-df6697104e19?fmt=json",
+          "headers": {
+            "content-type": null
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Fri, 06 Mar 2026 12:16:06 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "close",
+            "vary": "Accept-Encoding",
+            "x-ratelimit-limit": "1200",
+            "x-ratelimit-remaining": "605",
+            "x-ratelimit-reset": "1772799366",
+            "server": "Plack::Handler::Starlet",
+            "etag": "W/\"f7925a3d81fb61a802ab860229e1b5f4\"",
+            "access-control-allow-origin": "*",
+            "x-runtime": "0.036443",
+            "x-cache-status": "STALE"
+          },
+          "data": {
+            "id": "084308bd-1654-436f-ba03-df6697104e19",
+            "gender-id": null,
+            "gender": null,
+            "ipis": [],
+            "country": "US",
+            "life-span": {
+              "ended": false,
+              "end": null,
+              "begin": "1989"
+            },
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+            "name": "Green Day",
+            "sort-name": "Green Day",
+            "disambiguation": "",
+            "area": {
+              "id": "489ce91b-6658-3307-9877-795b68554c98",
+              "type-id": null,
+              "type": null,
+              "iso-3166-1-codes": [
+                "US"
+              ],
+              "name": "United States",
+              "sort-name": "United States",
+              "disambiguation": ""
+            },
+            "begin-area": {
+              "type-id": null,
+              "id": "f9719692-c39a-4d9c-bf8c-dd4035b09534",
+              "type": null,
+              "disambiguation": "",
+              "sort-name": "Berkeley",
+              "name": "Berkeley"
+            },
+            "end-area": null,
+            "type": "Group",
+            "isnis": [
+              "0000000122711282"
+            ]
+          },
+          "url": "https://musicbrainz.org/ws/2/artist/084308bd-1654-436f-ba03-df6697104e19?fmt=json",
+          "responseTime": 151
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [
+          {
+            "uid": "-k9RV5hvmSRu9jS4pZGOv",
+            "lhsExpr": "res.status",
+            "rhsExpr": "eq 200",
+            "rhsOperand": "200",
+            "operator": "eq",
+            "status": "pass"
+          },
+          {
+            "uid": "mIaKMxkxIZ0-zr4XkPtjs",
+            "lhsExpr": "res.status",
+            "rhsExpr": "neq 400",
+            "rhsOperand": "400",
+            "operator": "neq",
+            "status": "pass"
+          },
+          {
+            "uid": "mYOJGgLSaC8PeSxo_BOfY",
+            "lhsExpr": "res.responseTime",
+            "rhsExpr": "lte 500",
+            "rhsOperand": "500",
+            "operator": "lte",
+            "status": "pass"
+          },
+          {
+            "uid": "TeyHtBtIkzvqu2dM8Yr8b",
+            "lhsExpr": "res.body.name",
+            "rhsExpr": "eq Green Day",
+            "rhsOperand": "Green Day",
+            "operator": "eq",
+            "status": "pass"
+          },
+          {
+            "uid": "IPXQic8qt_0bxi7AsLS63",
+            "lhsExpr": "res.body.name",
+            "rhsExpr": "startsWith Green",
+            "rhsOperand": "Green",
+            "operator": "startsWith",
+            "status": "pass"
+          },
+          {
+            "uid": "xQepeOJcU8uYdnPaDTUTV",
+            "lhsExpr": "res.body.name",
+            "rhsExpr": "endsWith Day",
+            "rhsOperand": "Day",
+            "operator": "endsWith",
+            "status": "pass"
+          },
+          {
+            "uid": "kteI__8zCj26OGN0FA8Uz",
+            "lhsExpr": "res.body.country",
+            "rhsExpr": "eq US",
+            "rhsOperand": "US",
+            "operator": "eq",
+            "status": "pass"
+          },
+          {
+            "uid": "c69l0S8gTojEITWI-oaEr",
+            "lhsExpr": "res.body.country",
+            "rhsExpr": "in [\"US\",\"UK\"]",
+            "rhsOperand": "[\"US\",\"UK\"]",
+            "operator": "in",
+            "status": "pass"
+          },
+          {
+            "uid": "uvr-xHsrDV_cp1gnTK9d1",
+            "lhsExpr": "res.body.country",
+            "rhsExpr": "notIn [\"IT\",\"FR\",\"ES\"]",
+            "rhsOperand": "[\"IT\",\"FR\",\"ES\"]",
+            "operator": "notIn",
+            "status": "pass"
+          },
+          {
+            "uid": "li8ZLQecRnkB7xB3M6ZL1",
+            "lhsExpr": "res.body.isnis",
+            "rhsExpr": "length 1",
+            "rhsOperand": "1",
+            "operator": "length",
+            "status": "pass"
+          },
+          {
+            "uid": "-69h_jZI8c4fRAru5Cw6F",
+            "lhsExpr": "res.body.country",
+            "rhsExpr": "length 2",
+            "rhsOperand": "2",
+            "operator": "length",
+            "status": "pass"
+          },
+          {
+            "uid": "9lbyKzdr2pQQsayfxUJsl",
+            "lhsExpr": "res.body.life-span.begin",
+            "rhsExpr": "eq \"1989\"",
+            "rhsOperand": "\"1989\"",
+            "operator": "eq",
+            "status": "fail",
+            "error": "expected { name: 'ReferenceError', …(2) } to equal '1989'"
+          },
+          {
+            "uid": "mOG0mW6v6IDiVz4mLo6j7",
+            "lhsExpr": "res.body['life-span'].begin",
+            "rhsExpr": "eq \"1989\"",
+            "rhsOperand": "\"1989\"",
+            "operator": "eq",
+            "status": "pass"
+          },
+          {
+            "uid": "IS6vnf4U67nz3XA4ZlFVp",
+            "lhsExpr": "res.body['begin-area']['sort-name']",
+            "rhsExpr": "eq Berkeley",
+            "rhsOperand": "Berkeley",
+            "operator": "eq",
+            "status": "pass"
+          },
+          {
+            "uid": "4YsN6WVQQWrrYMUGexinu",
+            "lhsExpr": "res.body.name",
+            "rhsExpr": "contains Day",
+            "rhsOperand": "Day",
+            "operator": "contains",
+            "status": "pass"
+          },
+          {
+            "uid": "LbAeqkYKs7txvSI7COJj5",
+            "lhsExpr": "res.body.name",
+            "rhsExpr": "notContains Sfera",
+            "rhsOperand": "Sfera",
+            "operator": "notContains",
+            "status": "pass"
+          },
+          {
+            "uid": "nkxDUkjxR0BJH_F51SSaN",
+            "lhsExpr": "res.body.area['iso-3166-1-codes']",
+            "rhsExpr": "contains US",
+            "rhsOperand": "US",
+            "operator": "contains",
+            "status": "pass"
+          },
+          {
+            "uid": "wjLehofVb6wwy4sNX422G",
+            "lhsExpr": "res.body.area['iso-3166-1-codes']",
+            "rhsExpr": "notContains IT",
+            "rhsOperand": "IT",
+            "operator": "notContains",
+            "status": "pass"
+          },
+          {
+            "uid": "zvrp7EmceaekEMxqOfMjT",
+            "lhsExpr": "res.responseTime",
+            "rhsExpr": "between 30,500",
+            "rhsOperand": "30,500",
+            "operator": "between",
+            "status": "pass"
+          },
+          {
+            "uid": "LnEcZvnRbAEaezCLmqtIz",
+            "lhsExpr": "res.body.isnis.length",
+            "rhsExpr": "between 1,3",
+            "rhsOperand": "1,3",
+            "operator": "between",
+            "status": "pass"
+          },
+          {
+            "uid": "u226gV2Pvs4oEu4eIjQsQ",
+            "lhsExpr": "res.body.name.length",
+            "rhsExpr": "between 5,10",
+            "rhsOperand": "5,10",
+            "operator": "between",
+            "status": "pass"
+          },
+          {
+            "uid": "HumQzACJm4CKHhONstTWu",
+            "lhsExpr": "res.body.ipis",
+            "rhsExpr": "isEmpty",
+            "rhsOperand": "",
+            "operator": "isEmpty",
+            "status": "pass"
+          },
+          {
+            "uid": "QGT6lHruJ2bOwsuaEvfj_",
+            "lhsExpr": "res.body.disambiguation",
+            "rhsExpr": "isEmpty",
+            "rhsOperand": "",
+            "operator": "isEmpty",
+            "status": "pass"
+          },
+          {
+            "uid": "xVQPMp9ETC_3_1T3sefSe",
+            "lhsExpr": "res.body.gender",
+            "rhsExpr": "isNull",
+            "rhsOperand": "",
+            "operator": "isNull",
+            "status": "pass"
+          },
+          {
+            "uid": "9k1TF_UhDUicR48Tu17DB",
+            "lhsExpr": "res.body.notexists",
+            "rhsExpr": "isUndefined",
+            "rhsOperand": "",
+            "operator": "isUndefined",
+            "status": "pass"
+          },
+          {
+            "uid": "-NFrTlplBHuVLnQqj2G4r",
+            "lhsExpr": "res.body.gender",
+            "rhsExpr": "isDefined",
+            "rhsOperand": "",
+            "operator": "isDefined",
+            "status": "pass"
+          },
+          {
+            "uid": "n5YCcLFBgIDYcCcLEXvx9",
+            "lhsExpr": "res.body['life-span'].ended",
+            "rhsExpr": "isFalsy",
+            "rhsOperand": "",
+            "operator": "isFalsy",
+            "status": "pass"
+          },
+          {
+            "uid": "EhqMoLRsmmH2zDgJys1sf",
+            "lhsExpr": "res.body",
+            "rhsExpr": "isJson",
+            "rhsOperand": "",
+            "operator": "isJson",
+            "status": "pass"
+          },
+          {
+            "uid": "y1QcAQGiHoWe_gaEGmfPa",
+            "lhsExpr": "res.body.area",
+            "rhsExpr": "isJson",
+            "rhsOperand": "",
+            "operator": "isJson",
+            "status": "pass"
+          },
+          {
+            "uid": "2ez5j6NqjVi47G6EPQYzf",
+            "lhsExpr": "res.body['life-span'].ended",
+            "rhsExpr": "isBoolean",
+            "rhsOperand": "",
+            "operator": "isBoolean",
+            "status": "pass"
+          },
+          {
+            "uid": "boVn7NQfmG703RPM4E4LR",
+            "lhsExpr": "res.responseTime",
+            "rhsExpr": "isNumber",
+            "rhsOperand": "",
+            "operator": "isNumber",
+            "status": "pass"
+          },
+          {
+            "uid": "3lvxgvlwHTxtGPEc4rIYp",
+            "lhsExpr": "res.body.type",
+            "rhsExpr": "isString",
+            "rhsOperand": "",
+            "operator": "isString",
+            "status": "pass"
+          },
+          {
+            "uid": "_p_gBlWp9PhRJTuHRHX2i",
+            "lhsExpr": "res.body.country",
+            "rhsExpr": "matches /^U[S|K]$/",
+            "rhsOperand": "/^U[S|K]$/",
+            "operator": "matches",
+            "status": "pass"
+          }
+        ],
+        "testResults": [
+          {
+            "description": "Response Status should be 200",
+            "status": "pass",
+            "uid": "5id9kkiVITp-eSuHDTI2T"
+          },
+          {
+            "description": "[MusicBrainz] Response Status is OK (200)",
+            "status": "pass",
+            "uid": "ZX_bBEjGaOi6i00XAFVvG"
+          },
+          {
+            "description": "[Collection] ResponseTime max is 500 ms",
+            "status": "pass",
+            "uid": "G95OsAk3nMYdiobqKMMnq"
+          }
+        ],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 0.2280647,
+        "name": "JSON Asserts",
+        "path": "MusicBrainz\\JSON Asserts",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "MusicBrainz\\JSON Tests.bru"
+        },
+        "request": {
+          "method": "GET",
+          "url": "https://musicbrainz.org/ws/2/artist/084308bd-1654-436f-ba03-df6697104e19?fmt=json",
+          "headers": {
+            "content-type": null
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Fri, 06 Mar 2026 12:16:06 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "close",
+            "vary": "Accept-Encoding",
+            "x-ratelimit-limit": "1200",
+            "x-ratelimit-remaining": "479",
+            "x-ratelimit-reset": "1772799366",
+            "server": "Plack::Handler::Starlet",
+            "etag": "W/\"e168ed7d7f08066836ded57a90e1daba\"",
+            "access-control-allow-origin": "*",
+            "x-runtime": "0.065931",
+            "x-cache-status": "HIT"
+          },
+          "data": {
+            "gender": null,
+            "area": {
+              "disambiguation": "",
+              "name": "United States",
+              "sort-name": "United States",
+              "iso-3166-1-codes": [
+                "US"
+              ],
+              "type-id": null,
+              "id": "489ce91b-6658-3307-9877-795b68554c98",
+              "type": null
+            },
+            "country": "US",
+            "isnis": [
+              "0000000122711282"
+            ],
+            "sort-name": "Green Day",
+            "life-span": {
+              "ended": false,
+              "end": null,
+              "begin": "1989"
+            },
+            "end-area": null,
+            "gender-id": null,
+            "disambiguation": "",
+            "type": "Group",
+            "ipis": [],
+            "id": "084308bd-1654-436f-ba03-df6697104e19",
+            "name": "Green Day",
+            "begin-area": {
+              "type-id": null,
+              "id": "f9719692-c39a-4d9c-bf8c-dd4035b09534",
+              "name": "Berkeley",
+              "disambiguation": "",
+              "sort-name": "Berkeley",
+              "type": null
+            },
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b"
+          },
+          "url": "https://musicbrainz.org/ws/2/artist/084308bd-1654-436f-ba03-df6697104e19?fmt=json",
+          "responseTime": 184
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [],
+        "testResults": [
+          {
+            "description": "[Using Expect] Response Status should be 200",
+            "status": "pass",
+            "uid": "dtd_Z-bRnpNAmtar9ZiJ-"
+          },
+          {
+            "description": "[Using Assert] Response Status should be 200",
+            "status": "pass",
+            "uid": "onSOXvcYcHzV3f9o04BjX"
+          },
+          {
+            "description": "[Using Expect] Response Time should be between 30 and 500",
+            "status": "pass",
+            "uid": "LcIEjekS523z3UzKq0rPC"
+          },
+          {
+            "description": "[Using Expect] Career should start in 1989",
+            "status": "pass",
+            "uid": "uaLsXlDrfJFtuLU97OQxG"
+          },
+          {
+            "description": "[Using Assert] Career should start in 1989",
+            "status": "pass",
+            "uid": "JuY4TwzbxnrhfhL9xAnQk"
+          },
+          {
+            "description": "[Using Expect] All Items in isnis should start with 0 and end with 2",
+            "status": "pass",
+            "uid": "-e3AuoKi1uT3vJks3gyXz"
+          },
+          {
+            "description": "[MusicBrainz] Response Status is OK (200)",
+            "status": "pass",
+            "uid": "LtsHFsRyeMf0W35gvKKoE"
+          },
+          {
+            "description": "[Collection] ResponseTime max is 500 ms",
+            "status": "pass",
+            "uid": "jqRfspbmVM4ynN3xj4uOe"
+          }
+        ],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 0.2352063,
+        "name": "JSON Tests",
+        "path": "MusicBrainz\\JSON Tests",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "TestDirNoParams\\TestParams.bru"
+        },
+        "request": {
+          "method": "GET",
+          "url": "https://musicbrainz.org/ws/2/artist?query=Green&limit=5",
+          "headers": {
+            "content-type": null
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Fri, 06 Mar 2026 12:16:06 GMT",
+            "content-type": "application/json",
+            "content-length": "2069",
+            "connection": "close",
+            "x-ratelimit-limit": "1200",
+            "x-ratelimit-remaining": "390",
+            "x-ratelimit-reset": "1772799366",
+            "content-security-policy": "default-src 'none'; base-uri 'none'; connect-src 'self'; form-action 'self'; font-src 'self'; frame-ancestors 'none'; img-src 'self' data:; media-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; worker-src 'self';",
+            "x-content-type-options": "nosniff",
+            "x-frame-options": "SAMEORIGIN",
+            "x-xss-protection": "1; mode=block",
+            "last-modified": "Fri, 06 Mar 2026 12:13:05 GMT",
+            "etag": "\"NTZjMTY0MDAwMDAwMDAwMFNvbHI=--gzip\"",
+            "vary": "Accept-Encoding",
+            "x-cache-status": "HIT",
+            "access-control-allow-origin": "*"
+          },
+          "data": {
+            "created": "2026-03-06T12:15:42.904Z",
+            "count": 4553,
+            "offset": 0,
+            "artists": [
+              {
+                "id": "084308bd-1654-436f-ba03-df6697104e19",
+                "type": "Group",
+                "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+                "score": 100,
+                "name": "Green Day",
+                "sort-name": "Green Day",
+                "country": "US",
+                "area": {
+                  "id": "489ce91b-6658-3307-9877-795b68554c98",
+                  "type": "Country",
+                  "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+                  "name": "United States",
+                  "sort-name": "United States",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "begin-area": {
+                  "id": "f9719692-c39a-4d9c-bf8c-dd4035b09534",
+                  "type": "City",
+                  "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+                  "name": "Berkeley",
+                  "sort-name": "Berkeley",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "isnis": [
+                  "0000000122711282"
+                ],
+                "life-span": {
+                  "begin": "1989",
+                  "ended": null
+                },
+                "aliases": [
+                  {
+                    "sort-name": "グリーン・デイ",
+                    "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+                    "name": "グリーン・デイ",
+                    "locale": "ja",
+                    "type": "Artist name",
+                    "primary": true,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Greenday",
+                    "name": "Greenday",
+                    "locale": null,
+                    "type": null,
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  }
+                ],
+                "tags": [
+                  {
+                    "count": 10,
+                    "name": "rock"
+                  },
+                  {
+                    "count": 0,
+                    "name": "pop"
+                  },
+                  {
+                    "count": 18,
+                    "name": "alternative rock"
+                  },
+                  {
+                    "count": 6,
+                    "name": "punk"
+                  },
+                  {
+                    "count": 4,
+                    "name": "american"
+                  },
+                  {
+                    "count": 34,
+                    "name": "punk rock"
+                  },
+                  {
+                    "count": 0,
+                    "name": "grunge"
+                  },
+                  {
+                    "count": 0,
+                    "name": "post-punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "ska punk"
+                  },
+                  {
+                    "count": 1,
+                    "name": "usa"
+                  },
+                  {
+                    "count": 4,
+                    "name": "power pop"
+                  },
+                  {
+                    "count": 0,
+                    "name": "pop-punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "américain"
+                  },
+                  {
+                    "count": 0,
+                    "name": "post-grunge"
+                  },
+                  {
+                    "count": 0,
+                    "name": "pop rock"
+                  },
+                  {
+                    "count": 28,
+                    "name": "pop punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "skate punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "punk pop"
+                  },
+                  {
+                    "count": 1,
+                    "name": "california"
+                  },
+                  {
+                    "count": 1,
+                    "name": "bay area"
+                  },
+                  {
+                    "count": 0,
+                    "name": "pop and chart"
+                  },
+                  {
+                    "count": 1,
+                    "name": "united states"
+                  },
+                  {
+                    "count": 4,
+                    "name": "queer"
+                  },
+                  {
+                    "count": 0,
+                    "name": "classic pop punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "california punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "classic punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "bay area punk"
+                  },
+                  {
+                    "count": 0,
+                    "name": "pop/rock"
+                  },
+                  {
+                    "count": -1,
+                    "name": "2240665859492"
+                  }
+                ]
+              },
+              {
+                "id": "fb7272ba-f130-4f0a-934d-6eeea4c18c9a",
+                "type": "Person",
+                "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                "score": 95,
+                "gender-id": "36d3d30a-839d-3eda-8cb3-29be4384e4a9",
+                "name": "Al Green",
+                "sort-name": "Green, Al",
+                "gender": "male",
+                "country": "US",
+                "area": {
+                  "id": "489ce91b-6658-3307-9877-795b68554c98",
+                  "type": "Country",
+                  "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+                  "name": "United States",
+                  "sort-name": "United States",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "begin-area": {
+                  "id": "c4d48bca-3716-4533-8966-a25b8c7b50a5",
+                  "type": "City",
+                  "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+                  "name": "Forrest City",
+                  "sort-name": "Forrest City",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "disambiguation": "US soul singer, songwriter, pastor and record producer",
+                "ipis": [
+                  "00012614624",
+                  "00055306003",
+                  "00141754583"
+                ],
+                "isnis": [
+                  "000000008398392X"
+                ],
+                "life-span": {
+                  "begin": "1946-04-13",
+                  "ended": null
+                },
+                "aliases": [
+                  {
+                    "sort-name": "アル・グリーン",
+                    "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+                    "name": "アル・グリーン",
+                    "locale": "ja",
+                    "type": "Artist name",
+                    "primary": true,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Greene, Albert Leornes",
+                    "type-id": "d4dcd0c0-b341-3612-a332-c0ce797b25cf",
+                    "name": "Albert Leornes Greene",
+                    "locale": null,
+                    "type": "Legal name",
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Green, Al",
+                    "name": "Green, Al",
+                    "locale": null,
+                    "type": null,
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  }
+                ],
+                "tags": [
+                  {
+                    "count": 14,
+                    "name": "soul"
+                  },
+                  {
+                    "count": 1,
+                    "name": "1980s"
+                  },
+                  {
+                    "count": 1,
+                    "name": "1970s"
+                  },
+                  {
+                    "count": 3,
+                    "name": "gospel"
+                  },
+                  {
+                    "count": 2,
+                    "name": "southern soul"
+                  },
+                  {
+                    "count": 1,
+                    "name": "soul blues"
+                  },
+                  {
+                    "count": 0,
+                    "name": "soul and reggae"
+                  },
+                  {
+                    "count": 1,
+                    "name": "contemporary gospel"
+                  },
+                  {
+                    "count": 1,
+                    "name": "christmas music"
+                  },
+                  {
+                    "count": 5,
+                    "name": "smooth soul"
+                  },
+                  {
+                    "count": 1,
+                    "name": "pop-soul"
+                  },
+                  {
+                    "count": 2,
+                    "name": "memphis soul"
+                  },
+                  {
+                    "count": 1,
+                    "name": "2008 universal fire victim"
+                  }
+                ]
+              },
+              {
+                "id": "1a88b270-d763-48d5-a62c-2bb9cabb140c",
+                "type": "Person",
+                "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                "score": 89,
+                "gender-id": "36d3d30a-839d-3eda-8cb3-29be4384e4a9",
+                "name": "Grant Green",
+                "sort-name": "Green, Grant",
+                "gender": "male",
+                "country": "US",
+                "area": {
+                  "id": "489ce91b-6658-3307-9877-795b68554c98",
+                  "type": "Country",
+                  "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+                  "name": "United States",
+                  "sort-name": "United States",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "begin-area": {
+                  "id": "759f9567-9107-40ef-a825-e57824a62e70",
+                  "type": "City",
+                  "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+                  "name": "St. Louis",
+                  "sort-name": "St. Louis",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "end-area": {
+                  "id": "74e50e58-5deb-4b99-93a2-decbb365c07f",
+                  "type": "City",
+                  "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+                  "name": "New York",
+                  "sort-name": "New York",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "disambiguation": "jazz guitarist",
+                "ipis": [
+                  "00012619609"
+                ],
+                "isnis": [
+                  "000000011034995X"
+                ],
+                "life-span": {
+                  "begin": "1935-06-06",
+                  "end": "1979-01-31",
+                  "ended": true
+                },
+                "aliases": [
+                  {
+                    "sort-name": "Grant Geeen",
+                    "name": "Grant Geeen",
+                    "locale": null,
+                    "type": null,
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  }
+                ],
+                "tags": [
+                  {
+                    "count": 4,
+                    "name": "jazz"
+                  },
+                  {
+                    "count": 1,
+                    "name": "american"
+                  },
+                  {
+                    "count": 2,
+                    "name": "hard bop"
+                  },
+                  {
+                    "count": 1,
+                    "name": "jazz-funk"
+                  },
+                  {
+                    "count": 1,
+                    "name": "cool jazz"
+                  },
+                  {
+                    "count": 2,
+                    "name": "soul jazz"
+                  },
+                  {
+                    "count": 1,
+                    "name": "latin jazz"
+                  },
+                  {
+                    "count": -1,
+                    "name": "death by heart attack"
+                  }
+                ]
+              },
+              {
+                "id": "e425b041-c28a-4ae8-9d5c-997890433cd4",
+                "type": "Person",
+                "type-id": "b6e035f4-3ce9-331c-97df-83397230b0df",
+                "score": 87,
+                "gender-id": "36d3d30a-839d-3eda-8cb3-29be4384e4a9",
+                "name": "Green Velvet",
+                "sort-name": "Green Velvet",
+                "gender": "male",
+                "country": "US",
+                "area": {
+                  "id": "489ce91b-6658-3307-9877-795b68554c98",
+                  "type": "Country",
+                  "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+                  "name": "United States",
+                  "sort-name": "United States",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "begin-area": {
+                  "id": "29a709d8-0320-493e-8d0c-f2c386662b7f",
+                  "type": "City",
+                  "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+                  "name": "Chicago",
+                  "sort-name": "Chicago",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "isnis": [
+                  "0000000073285343"
+                ],
+                "life-span": {
+                  "begin": "1967-04-26",
+                  "ended": null
+                },
+                "aliases": [
+                  {
+                    "sort-name": "Green Verlet",
+                    "name": "Green Verlet",
+                    "locale": null,
+                    "type": null,
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Curan Stone",
+                    "name": "Curan Stone",
+                    "locale": null,
+                    "type": null,
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  }
+                ],
+                "tags": [
+                  {
+                    "count": 1,
+                    "name": "electronic"
+                  },
+                  {
+                    "count": 2,
+                    "name": "house"
+                  },
+                  {
+                    "count": 1,
+                    "name": "electro"
+                  },
+                  {
+                    "count": 1,
+                    "name": "minimal techno"
+                  },
+                  {
+                    "count": 1,
+                    "name": "tech house"
+                  }
+                ]
+              },
+              {
+                "id": "bd13909f-1c29-4c27-a874-d4aaf27c5b1a",
+                "type": "Group",
+                "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+                "score": 87,
+                "name": "Fleetwood Mac",
+                "sort-name": "Fleetwood Mac",
+                "country": "GB",
+                "area": {
+                  "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+                  "type": "Country",
+                  "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+                  "name": "United Kingdom",
+                  "sort-name": "United Kingdom",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "begin-area": {
+                  "id": "f03d09b3-39dc-4083-afd6-159e3f0d462f",
+                  "type": "City",
+                  "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+                  "name": "London",
+                  "sort-name": "London",
+                  "life-span": {
+                    "ended": null
+                  }
+                },
+                "isnis": [
+                  "0000000112090777"
+                ],
+                "life-span": {
+                  "begin": "1967-07",
+                  "ended": null
+                },
+                "aliases": [
+                  {
+                    "sort-name": "Green, Peter’s Fleetwood Mac",
+                    "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+                    "name": "Peter Green’s Fleetwood Mac",
+                    "locale": null,
+                    "type": "Artist name",
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Mac Fleetwood",
+                    "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+                    "name": "Mac Fleetwood",
+                    "locale": null,
+                    "type": "Search hint",
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Fleetwood Mack",
+                    "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+                    "name": "Fleetwood Mack",
+                    "locale": null,
+                    "type": "Search hint",
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Flettwood Mac",
+                    "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+                    "name": "Flettwood Mac",
+                    "locale": null,
+                    "type": "Search hint",
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  },
+                  {
+                    "sort-name": "Fleedwood Mac",
+                    "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+                    "name": "Fleedwood Mac",
+                    "locale": null,
+                    "type": "Search hint",
+                    "primary": null,
+                    "begin-date": null,
+                    "end-date": null
+                  }
+                ],
+                "tags": [
+                  {
+                    "count": 16,
+                    "name": "rock"
+                  },
+                  {
+                    "count": 4,
+                    "name": "pop"
+                  },
+                  {
+                    "count": -1,
+                    "name": "american"
+                  },
+                  {
+                    "count": 6,
+                    "name": "blues"
+                  },
+                  {
+                    "count": 0,
+                    "name": "british"
+                  },
+                  {
+                    "count": -1,
+                    "name": "band"
+                  },
+                  {
+                    "count": 0,
+                    "name": "folk rock"
+                  },
+                  {
+                    "count": 0,
+                    "name": "psychedelic rock"
+                  },
+                  {
+                    "count": 11,
+                    "name": "blues rock"
+                  },
+                  {
+                    "count": 0,
+                    "name": "jam band"
+                  },
+                  {
+                    "count": 1,
+                    "name": "classic rock"
+                  },
+                  {
+                    "count": 13,
+                    "name": "soft rock"
+                  },
+                  {
+                    "count": 0,
+                    "name": "acoustic rock"
+                  },
+                  {
+                    "count": 10,
+                    "name": "pop rock"
+                  },
+                  {
+                    "count": 0,
+                    "name": "electric blues"
+                  },
+                  {
+                    "count": 5,
+                    "name": "british blues"
+                  },
+                  {
+                    "count": 0,
+                    "name": "english"
+                  },
+                  {
+                    "count": 0,
+                    "name": "rock music"
+                  },
+                  {
+                    "count": 0,
+                    "name": "classic pop and rock"
+                  },
+                  {
+                    "count": 0,
+                    "name": "pop/rock"
+                  },
+                  {
+                    "count": 1,
+                    "name": "art pop"
+                  },
+                  {
+                    "count": 0,
+                    "name": "fleetwood mac"
+                  },
+                  {
+                    "count": 0,
+                    "name": "british-american"
+                  }
+                ]
+              }
+            ]
+          },
+          "url": "https://musicbrainz.org/ws/2/artist?query=Green&limit=5",
+          "responseTime": 158
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [
+          {
+            "uid": "QtLtT11RH8j-oJZlgr2_W",
+            "lhsExpr": "res.status",
+            "rhsExpr": "eq 200",
+            "rhsOperand": "200",
+            "operator": "eq",
+            "status": "pass"
+          }
+        ],
+        "testResults": [
+          {
+            "description": "Response Status should be 200",
+            "status": "pass",
+            "uid": "qcINGrcgZtAoGX5pItC8a"
+          },
+          {
+            "description": "[TestDirNoParams] Response Status is OK (200)",
+            "status": "pass",
+            "uid": "MNCASNupR3HrYSwaXWV-4"
+          },
+          {
+            "description": "[Collection] ResponseTime max is 500 ms",
+            "status": "pass",
+            "uid": "7mUW5e0TUHmVa74cT-J8k"
+          }
+        ],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 0.2057884,
+        "name": "TestParams",
+        "path": "TestDirNoParams\\TestParams",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "TestDirParams\\TestParams.bru"
+        },
+        "request": {
+          "method": "GET",
+          "url": "https://musicbrainz.org/ws/2/artist/084308bd-1654-436f-ba03-df6697104e19?fmt=json",
+          "headers": {
+            "content-type": null
+          }
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Fri, 06 Mar 2026 12:16:06 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "close",
+            "vary": "Accept-Encoding",
+            "x-ratelimit-limit": "1200",
+            "x-ratelimit-remaining": "287",
+            "x-ratelimit-reset": "1772799366",
+            "server": "Plack::Handler::Starlet",
+            "etag": "W/\"e168ed7d7f08066836ded57a90e1daba\"",
+            "access-control-allow-origin": "*",
+            "x-runtime": "0.065931",
+            "x-cache-status": "HIT"
+          },
+          "data": {
+            "gender": null,
+            "area": {
+              "disambiguation": "",
+              "name": "United States",
+              "sort-name": "United States",
+              "iso-3166-1-codes": [
+                "US"
+              ],
+              "type-id": null,
+              "id": "489ce91b-6658-3307-9877-795b68554c98",
+              "type": null
+            },
+            "country": "US",
+            "isnis": [
+              "0000000122711282"
+            ],
+            "sort-name": "Green Day",
+            "life-span": {
+              "ended": false,
+              "end": null,
+              "begin": "1989"
+            },
+            "end-area": null,
+            "gender-id": null,
+            "disambiguation": "",
+            "type": "Group",
+            "ipis": [],
+            "id": "084308bd-1654-436f-ba03-df6697104e19",
+            "name": "Green Day",
+            "begin-area": {
+              "type-id": null,
+              "id": "f9719692-c39a-4d9c-bf8c-dd4035b09534",
+              "name": "Berkeley",
+              "disambiguation": "",
+              "sort-name": "Berkeley",
+              "type": null
+            },
+            "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b"
+          },
+          "url": "https://musicbrainz.org/ws/2/artist/084308bd-1654-436f-ba03-df6697104e19?fmt=json",
+          "responseTime": 154
+        },
+        "error": null,
+        "status": "pass",
+        "assertionResults": [
+          {
+            "uid": "7UiPZVmGv0YgPsS6EkU9T",
+            "lhsExpr": "res.status",
+            "rhsExpr": "eq 200",
+            "rhsOperand": "200",
+            "operator": "eq",
+            "status": "pass"
+          }
+        ],
+        "testResults": [
+          {
+            "description": "Response Status should be 200",
+            "status": "pass",
+            "uid": "aBI870u_98JDKWRYHC6Wu"
+          },
+          {
+            "description": "[TestDir] Response Status is OK (200)",
+            "status": "pass",
+            "uid": "tKyDF681kOWLVxEVnFifQ"
+          },
+          {
+            "description": "[Collection] ResponseTime max is 500 ms",
+            "status": "pass",
+            "uid": "HTH5MW7fjUE5AsLVl7E9i"
+          }
+        ],
+        "preRequestTestResults": [],
+        "postResponseTestResults": [],
+        "shouldStopRunnerExecution": false,
+        "runDuration": 0.2055099,
+        "name": "TestParams",
+        "path": "TestDirParams\\TestParams",
+        "iterationIndex": 0
+      }
+    ],
+    "summary": {
+      "totalRequests": 12,
+      "passedRequests": 9,
+      "failedRequests": 1,
+      "errorRequests": 2,
+      "skippedRequests": 0,
+      "totalAssertions": 45,
+      "passedAssertions": 44,
+      "failedAssertions": 1,
+      "totalTests": 27,
+      "passedTests": 27,
+      "failedTests": 0,
+      "totalPreRequestTests": 0,
+      "passedPreRequestTests": 0,
+      "failedPreRequestTests": 0,
+      "totalPostResponseTests": 0,
+      "passedPostResponseTests": 0,
+      "failedPostResponseTests": 0
+    }
+  }
+]
