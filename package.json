@@ -1,6 +1,6 @@
 {
   "name": "@orangebeard-io/bruno-reporter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Report Bruno CLI JSON test results to Orangebeard",
   "main": "dist/reporter.js",
   "types": "dist/reporter.d.ts",
